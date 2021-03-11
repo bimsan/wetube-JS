@@ -40,7 +40,7 @@ export const videoDetail = async (req, res) => {
     params: { id },
   } = req;
   try {
-    const video = await Video.findById;
+    const video = await Video.findById(id);
     res.render("videoDetail", { pageTitle: "Video Detail", video });
   } catch (error) {
     console(error);
@@ -48,8 +48,14 @@ export const videoDetail = async (req, res) => {
   }
 };
 
-export const editVideo = (req, res) =>
+export const getEditVideo = (req, res) =>
   res.render("editVideo", { pageTitle: "Edit Video" });
+
+export const postEditVideo = (req, res) => {
+  const {
+    params: { id },
+  } = req;
+};
 
 export const deleteVideo = (req, res) =>
   res.render("deleteVideo", { pageTitle: "Delete Video" });

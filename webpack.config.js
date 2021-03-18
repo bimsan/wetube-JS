@@ -49,4 +49,4 @@ const config = {
   plugins: [new ExtractCSS("styles.css")],
 };
 
-module.exports = config({ devtool: "source-map" });
+module.exports = config;

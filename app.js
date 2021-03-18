@@ -11,7 +11,7 @@ import routes from "./routes";
 
 const app = express();
 
-app.use(helmet());
+app.use(helmet({ contentSecurityPolicy: false }));
 app.use(function (req, res, next) {
   res.setHeader(
     "Content-Security-Policy",

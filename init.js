@@ -11,6 +11,8 @@ import "./models/User";
 const PORT = process.env.PORT || 4000;
 
 const handleListening = () =>
-  console.log(`✅  Server-On: http://localhost:${PORT}`);
+  console.log(
+    `✅ 이거 보세요오오!!!! 서버 열렸자나요오오!!!: http://localhost:${PORT}`
+  );
 
 app.listen(PORT, handleListening);

@@ -27,7 +27,7 @@ export const postJoin = async (req, res, next) => {
     }
   }
 };
-
+//-------------------------------------------------------------------------------------------
 export const getLogin = (req, res) =>
   res.render("login", { pageTitle: "Log in" });
 
@@ -35,7 +35,7 @@ export const postLogin = passport.authenticate("local", {
   failureRedirect: routes.login,
   successRedirect: routes.home,
 });
-
+//-------------------------------------------------------------------------------------------
 export const githubLogin = passport.authenticate("github");
 
 export const githubLoginCallback = async (_, __, profile, cb) => {
@@ -67,7 +67,7 @@ export const githubLoginCallback = async (_, __, profile, cb) => {
 export const postGithubLogIn = (req, res) => {
   res.redirect(routes.home);
 };
-
+//-------------------------------------------------------------------------------------------
 export const logout = (req, res) => {
   req.logout();
   res.redirect(routes.home);
@@ -88,6 +88,8 @@ export const userDetail = async (req, res) => {
     res.redirect(routes.home);
   }
 };
+
+//-------------------------------------------------------------------------------------------
 export const getEditProfile = (req, res) =>
   res.render("editProfile", { pageTitle: "Edit Profile" });
 
@@ -107,7 +109,7 @@ export const postEditProfile = async (req, res) => {
     res.redirect(routes.editProfile);
   }
 };
-
+//-------------------------------------------------------------------------------------------
 export const getChangePassword = (req, res) =>
   res.render("changePassword", { pageTitle: "Change Password" });
 

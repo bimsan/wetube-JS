@@ -140,3 +140,10 @@ input {
     outline: none;
   }
 }
+
+video {
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}

@@ -317,13 +317,14 @@ input[type="submit"] {
   .videoPlayer:hover .videoPlayer__controls {
     opacity: 1; }
   .videoPlayer video {
+    width: 100%;
     max-width: 100%; }
   .videoPlayer .videoPlayer__controls {
     opacity: 0;
     transition: opacity 0.15s linear;
     position: absolute;
     z-index: 9;
-    bottom: 2.7px;
+    bottom: 2px;
     width: 100%;
     color: white;
     background-color: rgba(0, 0, 0, 0.5);

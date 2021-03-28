@@ -6,6 +6,7 @@
     }
   }
   video {
+    width: 100%;
     max-width: 100%;
   }
   .videoPlayer__controls {
@@ -13,7 +14,7 @@
     transition: opacity 0.15s linear;
     position: absolute;
     z-index: 9;
-    bottom: 2.7px;
+    bottom: 2px;
     width: 100%;
     color: white;
     background-color: rgba(0, 0, 0, 0.5);

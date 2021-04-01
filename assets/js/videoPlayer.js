@@ -7,6 +7,13 @@ const currentTime = document.getElementById("currentTime");
 const totalTime = document.getElementById("totalTime");
 const volumeRange = document.getElementById("jsVolume");
 
+const registerView = () => {
+  const videoId = window.location.href.split("/videos/")[1];
+  fetch(`/api/${videoId}/view`, {
+    method: "POST",
+  });
+};
+
 //.1
 function handlePlayClick() {
   if (videoPlayer.paused) {
@@ -78,7 +85,7 @@ const formatDate = (seconds) => {
   }
   return `${hours}:${minutes}:${totalSeconds}`;
 };
-// -----------------------------------------------------------------------------
+
 function getCurrentTime() {
   currentTime.innerHTML = formatDate(videoPlayer.currentTime);
 }
@@ -90,6 +97,7 @@ function setTotalTime() {
 }
 
 function handleEnded() {
+  registerView();
   videoPlayer.currentTime = 0;
   playBtn.innerHTML = '<i class="fas fa-play"></i>';
 }
@@ -109,6 +117,8 @@ function handleDrag(event) {
     volumeBtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
   }
 }
+
+// init()
 
 function init() {
   videoPlayer.volume = 0.5;

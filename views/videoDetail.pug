@@ -30,7 +30,13 @@ block  content
                     |   comments
             form.add__comment#jsAddComment
                 input(type="text", placeholder="Add a comment")
-            ul.video__comments-list#jsCommentList
-                each  comment in video.comments.reverse()
-                    li
-                        span=comment.text 
+            if video.creator.id !== loggedUser.id 
+                ul.video__comments-list#jsCommentList
+                    each  comment in video.comments.reverse()
+                        li
+                            span=comment.text 
+            else 
+                ul.video__comments-list-private
+                    each  comment in video.comments.reverse()
+                        li
+                            span=comment.text 

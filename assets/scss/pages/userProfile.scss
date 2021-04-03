@@ -11,12 +11,15 @@
     .profile__username {
       margin-top: 15px;
       font-size: 18px;
+      font-weight: 800;
     }
   }
-  .user-profile__btns:not(:last-child) {
+  .user-profile__btns {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
+    a:not(:last-child) {
+      margin-bottom: 20px;
+    }
   }
 }

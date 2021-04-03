@@ -51,11 +51,32 @@
     .video__comments-list {
       margin-top: 50px;
       li {
-        background-color: #3498db;
+        width: fit-content;
+        background-color: #1e90ff;
         color: white;
         padding: 15px;
-        border-radius: 20px;
+        border-radius: 30px;
         border-bottom-left-radius: 0px;
+        text-align: center;
+        font-size: 18px;
+        color: #ffffff;
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+      }
+    }
+    .video__comments-list-private {
+      margin-top: 50px;
+      li {
+        width: fit-content;
+        background-color: #2ed573;
+        color: white;
+        padding: 15px;
+        border-radius: 30px;
+        border-bottom-left-radius: 0px;
+        text-align: center;
+        font-size: 18px;
+        color: #ffffff;
         &:not(:last-child) {
           margin-bottom: 15px;
         }

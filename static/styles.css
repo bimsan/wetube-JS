@@ -308,8 +308,8 @@ input[type="submit"] {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
 
 .videoBlock .videoBlock__title {
-  font-size: 18px;
-  font-weight: 300;
+  font-size: 20px;
+  font-weight: 500;
   margin-bottom: 10px; }
 
 .videoPlayer {
@@ -431,12 +431,30 @@ input[type="submit"] {
     .video-detail__container .video__comments .video__comments-list {
       margin-top: 50px; }
       .video-detail__container .video__comments .video__comments-list li {
-        background-color: #3498db;
+        width: fit-content;
+        background-color: #1e90ff;
         color: white;
         padding: 15px;
-        border-radius: 20px;
-        border-bottom-left-radius: 0px; }
+        border-radius: 30px;
+        border-bottom-left-radius: 0px;
+        text-align: center;
+        font-size: 18px;
+        color: #ffffff; }
         .video-detail__container .video__comments .video__comments-list li:not(:last-child) {
+          margin-bottom: 15px; }
+    .video-detail__container .video__comments .video__comments-list-private {
+      margin-top: 50px; }
+      .video-detail__container .video__comments .video__comments-list-private li {
+        width: fit-content;
+        background-color: #2ed573;
+        color: white;
+        padding: 15px;
+        border-radius: 30px;
+        border-bottom-left-radius: 0px;
+        text-align: center;
+        font-size: 18px;
+        color: #ffffff; }
+        .video-detail__container .video__comments .video__comments-list-private li:not(:last-child) {
           margin-bottom: 15px; }
 
 .user-profile {
@@ -451,11 +469,13 @@ input[type="submit"] {
     margin-bottom: 30px; }
     .user-profile .user-profile__header .profile__username {
       margin-top: 15px;
-      font-size: 18px; }
-  .user-profile .user-profile__btns:not(:last-child) {
+      font-size: 18px;
+      font-weight: 800; }
+  .user-profile .user-profile__btns {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px; }
+    align-items: center; }
+    .user-profile .user-profile__btns a:not(:last-child) {
+      margin-bottom: 20px; }
 
 /*# sourceMappingURL=styles.css.map*/

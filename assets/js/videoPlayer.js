@@ -118,6 +118,16 @@ function handleDrag(event) {
   }
 }
 
+function handleScreenPlay() {
+  if (videoPlayer.paused) {
+    videoPlayer.play();
+    playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+  } else {
+    videoPlayer.pause();
+    playBtn.innerHTML = '<i class="fas fa-play"></i>';
+  }
+}
+
 // init()
 
 function init() {
@@ -127,6 +137,7 @@ function init() {
   fullScrnBtn.addEventListener("click", goFullScreen); //.3
   videoPlayer.addEventListener("loadedmetadata", setTotalTime);
   videoPlayer.addEventListener("ended", handleEnded);
+  videoPlayer.addEventListener("click", handleScreenPlay);
   volumeRange.addEventListener("input", handleDrag);
 }
 

@@ -190,10 +190,44 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _videoRecorder__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./videoRecorder */ "./assets/js/videoRecorder.js");
 /* harmony import */ var _videoRecorder__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_videoRecorder__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _addComment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./addComment */ "./assets/js/addComment.js");
+/* harmony import */ var _preview__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./preview */ "./assets/js/preview.js");
+/* harmony import */ var _preview__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_preview__WEBPACK_IMPORTED_MODULE_4__);
 
 
 
 
+
+
+/***/ }),
+
+/***/ "./assets/js/preview.js":
+/*!******************************!*\
+  !*** ./assets/js/preview.js ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var videoBlock = document.getElementsByClassName("videoBlock");
+var videoPreview = document.querySelector("#jsPreview video");
+
+function handlePreview() {
+  videoPreview.play();
+  videoPreview.muted = true;
+}
+
+function handlePreview2() {
+  videoPreview.pause();
+  videoPreview.currentTime = 0;
+}
+
+function init() {
+  videoPreview.addEventListener("mouseenter", handlePreview);
+  videoPreview.addEventListener("mouseleave", handlePreview2);
+}
+
+if (videoBlock) {
+  init();
+}
 
 /***/ }),
 
@@ -327,6 +361,16 @@ function handleDrag(event) {
   } else {
     volumeBtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
   }
+}
+
+function handleScreenPlay() {
+  if (videoPlayer.paused) {
+    videoPlayer.play();
+    playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+  } else {
+    videoPlayer.pause();
+    playBtn.innerHTML = '<i class="fas fa-play"></i>';
+  }
 } // init()
 
 
@@ -340,6 +384,7 @@ function init() {
 
   videoPlayer.addEventListener("loadedmetadata", setTotalTime);
   videoPlayer.addEventListener("ended", handleEnded);
+  videoPlayer.addEventListener("click", handleScreenPlay);
   volumeRange.addEventListener("input", handleDrag);
 }
 

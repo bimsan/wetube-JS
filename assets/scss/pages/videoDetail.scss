@@ -4,15 +4,19 @@
   align-items: center;
   .video__info {
     width: 100%;
-    max-width: 850px;
+    max-width: 1500px;
     margin-top: 25px;
     button {
       width: 100px;
       margin-bottom: 25px;
     }
     .video__author {
+      font-size: 16px;
       a {
-        color: #25ccf7;
+        color: black;
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 3px 8px;
+        border-radius: 14px;
       }
     }
     .video__title,
@@ -24,16 +28,23 @@
     .video__title {
       font-size: 22px;
       font-weight: 500;
+      color: black;
     }
     .video__views {
-      font-size: 14px;
+      font-size: 16px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    .video__author {
+      margin-top: 20px;
     }
     .video__description {
       width: fit-content;
       font-size: 16px;
-      background-color: #d2dae2;
+      background-color: #ffdd59;
       padding: 10px;
       border-radius: 25px;
+      margin-top: 15px;
     }
   }
   .video__comments {

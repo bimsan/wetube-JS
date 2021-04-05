@@ -1,6 +1,7 @@
 .header {
-  background-color: $red;
+  background-color: white;
   margin-bottom: 50px;
+  padding: 14px 0;
   .header__wrapper {
     padding: 5px, 0px;
     width: 100%;
@@ -10,9 +11,29 @@
     grid-template-columns: repeat(3, 1fr);
     place-items: center;
     .header__column {
+      align-items: center;
+      h1 {
+        margin-left: 3px;
+        font-size: 23px;
+        font-weight: 700;
+        color: black;
+      }
+      span {
+        font-size: 10px;
+        font-weight: 700;
+        color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        position: absolute;
+        top: 5px;
+        left: 135px;
+      }
       i {
-        color: white;
+        color: $red;
         font-size: 30px;
+      }
+      &:nth-child(1) {
+        display: flex;
+        position: relative;
       }
       &:nth-child(2) {
         width: 100%;
@@ -24,7 +45,7 @@
       ul {
         display: flex;
         a {
-          color: white;
+          color: grey;
         }
         font-weight: 600;
         max-width: none;

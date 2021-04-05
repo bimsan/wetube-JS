@@ -50,6 +50,20 @@
         font-weight: 600;
         max-width: none;
         text-transform: uppercase;
+        li {
+          background: #fff;
+          padding: 3px 8px;
+          display: inline-block;
+          transition: background 0.25s ease-in-out;
+          -moz-transition: background 0.25s ease-in-out;
+          -webkit-transition: background 0.25s ease-in-out;
+        }
+        li:hover {
+          background: $red;
+          a {
+            color: black;
+          }
+        }
         li:not(:last-child) {
           margin-right: 17px;
         }

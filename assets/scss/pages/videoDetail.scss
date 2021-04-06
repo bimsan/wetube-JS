@@ -14,9 +14,7 @@
       font-size: 16px;
       a {
         color: black;
-        background-color: rgba(0, 0, 0, 0.2);
         padding: 3px 8px;
-        border-radius: 14px;
       }
     }
     .video__title,
@@ -26,25 +24,48 @@
       margin-bottom: 15px;
     }
     .video__title {
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 500;
       color: black;
     }
     .video__views {
-      font-size: 16px;
+      font-size: 14px;
       padding-bottom: 20px;
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
     .video__author {
       margin-top: 20px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      img {
+        object-fit: cover;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+      span {
+        font-size: 13px;
+        font-weight: 700;
+        color: rgba(0, 0, 0, 0.9);
+        justify-items: center;
+        position: absolute;
+        top: 21px;
+        left: 75px;
+      }
     }
     .video__description {
       width: fit-content;
-      font-size: 16px;
-      background-color: #ffdd59;
+      font-size: 14px;
+      font-weight: 500;
+      color: black;
+      background-color: $dark-grey;
       padding: 10px;
-      border-radius: 25px;
       margin-top: 15px;
+      margin-left: 30px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 30px;
+      border-top-left-radius: 0;
     }
   }
   .video__comments {
@@ -59,7 +80,7 @@
         width: 100%;
       }
     }
-    .video__comments-list {
+    .video__comments-list-github {
       margin-top: 50px;
       li {
         width: fit-content;
@@ -76,7 +97,7 @@
         }
       }
     }
-    .video__comments-list-private {
+    .video__comments-list-user {
       margin-top: 50px;
       li {
         width: fit-content;

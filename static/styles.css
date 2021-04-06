@@ -165,7 +165,7 @@ main {
 button,
 input:not([type="file"]),
 textarea,
-fileUpload {
+.fileUpload {
   padding: 7px 10px;
   width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.3);
@@ -178,9 +178,13 @@ fileUpload {
   button::placeholder,
   input:not([type="file"])::placeholder,
   textarea::placeholder,
-  fileUpload::placeholder {
+  .fileUpload::placeholder {
     color: rgba(0, 0, 0, 0.7);
     font-weight: 500; }
+
+input:focus {
+  border: 0.8px solid #0652dd;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
 
 button {
   border: none;
@@ -211,7 +215,7 @@ input[type="submit"] {
       .header .header__wrapper .header__column h1 {
         margin-left: 3px;
         font-size: 23px;
-        font-weight: 700;
+        font-weight: 600;
         color: black; }
       .header .header__wrapper .header__column span {
         font-size: 10px;
@@ -241,7 +245,7 @@ input[type="submit"] {
           color: grey; }
         .header .header__wrapper .header__column ul li {
           background: #fff;
-          padding: 3px 8px;
+          padding: 5px 8px;
           display: inline-block;
           transition: background 0.25s ease-in-out;
           -moz-transition: background 0.25s ease-in-out;
@@ -258,7 +262,7 @@ input[type="submit"] {
 .footer {
   margin: 50px 0;
   padding-top: 50px;
-  border-top: 1.5px solid rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -421,7 +425,7 @@ input[type="submit"] {
 .home-videos {
   display: grid;
   grid-template-columns: repeat(6, minmax(150px, 1fr));
-  grid-gap: 30px;
+  grid-gap: 20px;
   margin-top: 70px; }
   .home-videos .videoBlock:first-child,
   .home-videos .videoBlock:nth-child(2) {
@@ -446,31 +450,50 @@ input[type="submit"] {
       font-size: 16px; }
       .video-detail__container .video__info .video__author a {
         color: black;
-        background-color: rgba(0, 0, 0, 0.2);
-        padding: 3px 8px;
-        border-radius: 14px; }
+        padding: 3px 8px; }
     .video-detail__container .video__info .video__title,
     .video-detail__container .video__info .video__views,
     .video-detail__container .video__info .video__description {
       display: block;
       margin-bottom: 15px; }
     .video-detail__container .video__info .video__title {
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 500;
       color: black; }
     .video-detail__container .video__info .video__views {
-      font-size: 16px;
+      font-size: 14px;
       padding-bottom: 20px;
       border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
     .video-detail__container .video__info .video__author {
-      margin-top: 20px; }
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      position: relative; }
+      .video-detail__container .video__info .video__author img {
+        object-fit: cover;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%; }
+      .video-detail__container .video__info .video__author span {
+        font-size: 13px;
+        font-weight: 700;
+        color: rgba(0, 0, 0, 0.9);
+        justify-items: center;
+        position: absolute;
+        top: 21px;
+        left: 75px; }
     .video-detail__container .video__info .video__description {
       width: fit-content;
-      font-size: 16px;
-      background-color: #ffdd59;
+      font-size: 14px;
+      font-weight: 500;
+      color: black;
+      background-color: #e7e7e7;
       padding: 10px;
-      border-radius: 25px;
-      margin-top: 15px; }
+      margin-top: 15px;
+      margin-left: 30px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 30px;
+      border-top-left-radius: 0; }
   .video-detail__container .video__comments {
     margin-top: 25px; }
     .video-detail__container .video__comments .video__comment-number {
@@ -480,9 +503,9 @@ input[type="submit"] {
       width: 100%; }
       .video-detail__container .video__comments .add__comment input {
         width: 100%; }
-    .video-detail__container .video__comments .video__comments-list {
+    .video-detail__container .video__comments .video__comments-list-github {
       margin-top: 50px; }
-      .video-detail__container .video__comments .video__comments-list li {
+      .video-detail__container .video__comments .video__comments-list-github li {
         width: fit-content;
         background-color: #1e90ff;
         color: white;
@@ -492,11 +515,11 @@ input[type="submit"] {
         text-align: center;
         font-size: 18px;
         color: #ffffff; }
-        .video-detail__container .video__comments .video__comments-list li:not(:last-child) {
+        .video-detail__container .video__comments .video__comments-list-github li:not(:last-child) {
           margin-bottom: 15px; }
-    .video-detail__container .video__comments .video__comments-list-private {
+    .video-detail__container .video__comments .video__comments-list-user {
       margin-top: 50px; }
-      .video-detail__container .video__comments .video__comments-list-private li {
+      .video-detail__container .video__comments .video__comments-list-user li {
         width: fit-content;
         background-color: #2ed573;
         color: white;
@@ -506,7 +529,7 @@ input[type="submit"] {
         text-align: center;
         font-size: 18px;
         color: #ffffff; }
-        .video-detail__container .video__comments .video__comments-list-private li:not(:last-child) {
+        .video-detail__container .video__comments .video__comments-list-user li:not(:last-child) {
           margin-bottom: 15px; }
 
 .user-profile {

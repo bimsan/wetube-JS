@@ -12,12 +12,13 @@ block  content
                     button Edit video
             h5.video__title=video.title
             if video.views === 1
-                span.video__views 1 view
+                span.video__views 조회수 1
             else 
-                span.video__views #{video.views} views
+                span.video__views 조회수 #{video.views} 
             .video__author 
-                | Uploaded by 
-                a(href=routes.userDetail(video.creator.id))=video.creator.name
+                a(href=routes.userDetail(video.creator.id))
+                    img.v-avatar(src=`/${video.creator.avatarUrl}`)
+                    span.profile__authorname=video.creator.name
             p.video__description=video.description
         .video__comments
             if video.comments.length === 1
@@ -31,12 +32,18 @@ block  content
             form.add__comment#jsAddComment
                 input(type="text", placeholder="Add a comment")
             if video.creator.id !== loggedUser.id 
-                ul.video__comments-list#jsCommentList
+                ul.video__comments-list-github#jsCommentList
                     each  comment in video.comments.reverse()
                         li
                             span=comment.text 
+                            if loggedUser && comment.creator === loggedUser.id 
+                                button.delete__comment
+                                    i.far.fa-trash-alt 
             else 
-                ul.video__comments-list-private
+                ul.video__comments-list-user 
                     each  comment in video.comments.reverse()
                         li
                             span=comment.text 
+                            if loggedUser && comment.creator === loggedUser.id 
+                                button.delete__comment
+                                    i.far.fa-trash-alt 

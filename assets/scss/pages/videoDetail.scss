@@ -51,7 +51,7 @@
         justify-items: center;
         position: absolute;
         top: 21px;
-        left: 75px;
+        left: 70px;
       }
     }
     .video__description {
@@ -70,6 +70,9 @@
   }
   .video__comments {
     margin-top: 25px;
+    padding: 35px 60px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
     .video__comment-number {
       font-size: 18px;
     }

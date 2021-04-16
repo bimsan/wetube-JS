@@ -249,17 +249,15 @@ input[type="submit"] {
         text-transform: uppercase; }
         .header .header__wrapper .header__column ul a {
           color: grey; }
-        .header .header__wrapper .header__column ul li {
+        .header .header__wrapper .header__column ul a {
           background: #fff;
           padding: 5px 8px;
           display: inline-block;
-          transition: background 0.25s ease-in-out;
-          -moz-transition: background 0.25s ease-in-out;
-          -webkit-transition: background 0.25s ease-in-out; }
-        .header .header__wrapper .header__column ul li:hover {
-          background: #ea232c; }
-          .header .header__wrapper .header__column ul li:hover a {
-            color: black; }
+          transition: 0.25s ease-in-out;
+          -moz-transition: 0.25s ease-in-out;
+          -webkit-transition: 0.25s ease-in-out; }
+        .header .header__wrapper .header__column ul a:hover {
+          color: red; }
         .header .header__wrapper .header__column ul li:not(:last-child) {
           margin-right: 17px; }
       .header .header__wrapper .header__column form {
@@ -505,7 +503,7 @@ input[type="submit"] {
   .video-detail__container .video__comments {
     margin-top: 25px;
     padding: 35px 60px;
-    border: 2px solid rgba(0, 0, 0, 0.5);
+    border: 1.7px solid rgba(0, 0, 0, 0.4);
     border-radius: 15px;
     background-color: #e7e7e7; }
     .video-detail__container .video__comments .video__comment-number {
@@ -515,9 +513,9 @@ input[type="submit"] {
       width: 100%; }
       .video-detail__container .video__comments .add__comment input {
         width: 100%; }
-    .video-detail__container .video__comments .video__comments-list-github {
+    .video-detail__container .video__comments .video__commentList-user {
       margin-top: 50px; }
-      .video-detail__container .video__comments .video__comments-list-github li {
+      .video-detail__container .video__comments .video__commentList-user li {
         width: fit-content;
         background-color: #1e90ff;
         color: white;
@@ -527,11 +525,11 @@ input[type="submit"] {
         text-align: center;
         font-size: 18px;
         color: #ffffff; }
-        .video-detail__container .video__comments .video__comments-list-github li:not(:last-child) {
+        .video-detail__container .video__comments .video__commentList-user li:not(:last-child) {
           margin-bottom: 15px; }
-    .video-detail__container .video__comments .video__comments-list-user {
+    .video-detail__container .video__comments .video__commentList-github {
       margin-top: 50px; }
-      .video-detail__container .video__comments .video__comments-list-user li {
+      .video-detail__container .video__comments .video__commentList-github li {
         width: fit-content;
         background-color: #2ed573;
         color: white;
@@ -541,7 +539,7 @@ input[type="submit"] {
         text-align: center;
         font-size: 18px;
         color: #ffffff; }
-        .video-detail__container .video__comments .video__comments-list-user li:not(:last-child) {
+        .video-detail__container .video__comments .video__commentList-github li:not(:last-child) {
           margin-bottom: 15px; }
 
 .user-profile {

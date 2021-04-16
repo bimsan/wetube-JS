@@ -32,7 +32,7 @@ block  content
             form.add__comment#jsAddComment
                 input(type="text", placeholder="Add a comment")
             if video.creator.id !== loggedUser.id 
-                ul.video__comments-list-github#jsCommentList
+                ul.video__commentList-github#jsCommentList
                     each  comment in video.comments.reverse()
                         li
                             span=comment.text 
@@ -40,7 +40,7 @@ block  content
                                 button.delete__comment
                                     i.far.fa-trash-alt 
             else 
-                ul.video__comments-list-user 
+                ul.video__commentList-user 
                     each  comment in video.comments.reverse()
                         li
                             span=comment.text 

@@ -71,7 +71,7 @@
   .video__comments {
     margin-top: 25px;
     padding: 35px 60px;
-    border: 2px solid rgba(0, 0, 0, 0.5);
+    border: 1.7px solid rgba(0, 0, 0, 0.4);
     border-radius: 15px;
     background-color: $dark-grey;
     .video__comment-number {
@@ -84,7 +84,7 @@
         width: 100%;
       }
     }
-    .video__comments-list-github {
+    .video__commentList-user {
       margin-top: 50px;
       li {
         width: fit-content;
@@ -101,7 +101,7 @@
         }
       }
     }
-    .video__comments-list-user {
+    .video__commentList-github {
       margin-top: 50px;
       li {
         width: fit-content;
